@@ -1,0 +1,238 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+:root {
+	--mainColor: #0E1923;
+	--mainColorLight: #5767aa;
+	--secondaryColor: #edbd1f;
+	--textColor: #eee;
+
+}
+
+.header-bg {
+	backdrop-filter: blur(5px);
+	background-color: whitesmoke;
+	border-bottom: 0px solid #717171;
+	backdrop-filter: blur(20px);
+	color: var(--textColor);
+}
+
+nav a,
+nav div>button {
+	margin: 0 1rem;
+	color: rgb(56, 55, 55);
+	text-decoration: none;
+	padding: 10px 0;
+}
+
+.nav-btn {
+	padding: 10px;
+	font-size: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+
+	header nav {
+		position: absolute;
+		top: -100vh;
+		left: 0;
+		height: 100vh;
+		width: 100%;
+		display: flex;
+		z-index: 10;
+		flex-direction: column;
+		align-items: left;
+		justify-items: space-between;
+		gap: 1.5rem;
+		padding-top: 140px;
+		padding-left: 15px;
+		background-color: black;
+		color: white;
+		transition: 1s;
+	}
+
+	header .responsive_nav {
+		transform: translateY(100vh);
+	}
+
+	nav a,
+	nav div button {
+		margin: 0 1rem;
+		color: var(--textColor);
+		text-decoration: none;
+	}
+
+	nav a.active {
+
+		border-bottom: none;
+	}
+	
+}
+
+.footer-bg {
+	background-color: #F2F2F2;
+	color: rgb(255, 255, 255);
+
+}
+
+.first-img {
+	z-index: -1;
+}
+
+
+.link:hover {
+	color: white;
+}
+
+.hover {
+	position: relative;
+	z-index: 0;
+}
+
+.hover::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: scaleY(0);
+	transform-origin: bottom center;
+	background: rgb(255, 217, 0);
+	z-index: -4;
+	transition: transform 0.8s;
+	color: white;
+}
+
+.hover:hover::after {
+	transform: scaleY(1);
+}
+
+.hover:hover .textHover {
+	color: white;
+}
+
+.footerText {
+	background: #060c23;
+}
+
+/* About bg image */
+.aboutBG {
+	background-image: url('./assests/Source.jpg');
+	background-size: contain;
+}
+
+.sidelink {
+	border: 1px solid black;
+	padding: 10px 15px;
+}
+
+.bottom-footer {
+	background-color: #979797;
+}
+
+p {
+	text-align: justify;
+}
+
+/* service */
+.service-bg {
+	/* background-color: #22092C; */
+	background-color: white;
+	color: white !important;
+}
+
+.homeServiceCard {
+	box-shadow: 0 1px 5px rgb(255, 217, 0);
+}
+
+.service-bg h1 {
+	font-size: 3rem;
+	font-weight: 50;
+}
+
+h1 {
+	font-weight: 20;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	width: 180px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* profile Image */
+.profileImage {
+	filter: grayscale(100%);
+}
+
+.profileImage:hover {
+	filter: grayscale(0);
+}
+
+/* SplashScreen.css */
+.splash-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #EEF5FF;
+	/* You can customize the background color */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+/* Add your animation styles here */
+/* .animation {
+	
+	animation: mymove 2s ease-in-out;
+}
+
+@keyframes mymove {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+		;
+	}
+} */
+.subheader {
+	position: relative;
+	z-index: 1000;
+}
